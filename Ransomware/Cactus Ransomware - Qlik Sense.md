@@ -33,11 +33,11 @@ let Domain_IOCs = dynamic(['sonarmsng5vzwqezlvtu2iiwwdn3dxkhotftikhowpfjuzg7p3ca
 let IP_IOCs = dynamic (['45.61.147.176','216.107.136.46','144.172.122.30']);
 let Email_IOCs = dynamic(['cactus787835@proton.me']);
 let FileName_IOCs = dynamic(['file.exe','anydesk.zip','AcRes.exe','any.exe','putty.zip','Qlik_sense_enterprise.zip','qlik-sens-nov.zip','qlik-sens-Patch.zip','Qliksens.exe','Qliksens_updated.zip','Qliksens_update.zip']);
-let FilePatch_IOCs = dynamic(['C:\\Users\\Public\\svchost.exe','c:\\windows\\temp\\file.exe','c:\\windows\\temp\\putty.exe','c:\\windows\\temp\\Qliksens.exe',
+let FilePath_IOCs = dynamic(['C:\\Users\\Public\\svchost.exe','c:\\windows\\temp\\file.exe','c:\\windows\\temp\\putty.exe','c:\\windows\\temp\\Qliksens.exe',
 'c:\\windows\\temp\\any.exe','C:\\temp\\putty.exe','C:\\Windows\\appcompat\\AcRes.exe']);
 (union isfuzzy=true
      (DeviceFileEvents
-     | where FolderPath has_any (FilePatch_IOCs)),
+     | where FolderPath has_any (FilePath_IOCs)),
      (DeviceFileEvents 
       | where InitiatingProcessVersionInfoOriginalFileName has_any (FileName_IOCs)),  
      (DeviceNetworkEvents
