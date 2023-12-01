@@ -7,7 +7,8 @@
 ## Query Information
 
 Description:
-This query uses hashes, external doamins and email address. This is used to search your environment for hash, outgoing email and outgoing internet connections.
+This query uses hashes, external doamins, file names/pathcs and email address to locate IOC's for the Qlik Sense CVE's that utilize Cactus Ransomware. 
+CVE-2023-41266, CVE-2023-41265,CVE-2023-48365
 
 
 
