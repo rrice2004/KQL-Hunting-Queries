@@ -27,8 +27,8 @@ let SHA256_IOCs = dynamic(['78c16de9fc07f1d0375a093903f86583a4e32037a7da8aa2f90e
 '828e81aa16b2851561fff6d3127663ea2d1d68571f06cbd732fdf5672086924d']);
 let Domain_IOCs = dynamic(['sonarmsng5vzwqezlvtu2iiwwdn3dxkhotftikhowpfjuzg7p3ca5eid.onion',
 'cactusbloguuodvqjmnzlwetjlpj6aggc6iocwhuupb47laukux7ckid.onion',
-'http://sonarmsng5vzwqezlvtu2iiwwdn3dxkhotftikhowpfjuzg7p3ca5eid.onion/contact/Cactus_Support',
-'zohoservice.net','http://zohoservice.net/putty.zip','http://216.107.136.46/Qliksens_update.zip','http://zohoservice.net/qlik-sens-Patch.zip','http://zohoservice.net/qlik-sens-nov.zip']);
+'sonarmsng5vzwqezlvtu2iiwwdn3dxkhotftikhowpfjuzg7p3ca5eid.onion/contact/Cactus_Support',
+'zohoservice.net','zohoservice.net/putty.zip','216.107.136.46/Qliksens_update.zip','zohoservice.net/qlik-sens-Patch.zip','zohoservice.net/qlik-sens-nov.zip']);
 let IP_IOCs = dynamic (['45.61.147.176','216.107.136.46','144.172.122.30']);
 let Email_IOCs = dynamic(['cactus787835@proton.me']);
 let FileName_IOCs = dynamic(['file.exe','anydesk.zip','AcRes.exe','any.exe','putty.zip','Qlik_sense_enterprise.zip','qlik-sens-nov.zip','qlik-sens-Patch.zip','Qliksens.exe','Qliksens_updated.zip','Qliksens_update.zip']);
@@ -52,6 +52,7 @@ let FilePatch_IOCs = dynamic(['C:\\Users\\Public\\svchost.exe','c:\\windows\\tem
      (DeviceFileEvents
      | where SHA256 has_any (SHA256_IOCs))
 )
+
 
 ```
 
